@@ -5,9 +5,9 @@ html {
   height: 100%;
 }
 
-body {
-  @include serif-font;
-}
+// body {
+//   @include serif-font;
+// }
 
 hr {
   max-width: 50px;
@@ -17,6 +17,10 @@ hr {
 
 hr.light {
   border-color: white;
+}
+
+hr.dark {
+  border-color: $gray-darker;
 }
 
 a {
@@ -48,8 +52,13 @@ p {
 }
 
 .bg-dark {
-  color: white;
-  background-color: $gray-darker !important;
+  color: #222;
+  background-color: $background-dark !important;
+}
+
+.bg-light {
+  color: #222;
+  background-color: $background-light !important;
 }
 
 .text-faded {
@@ -57,11 +66,16 @@ p {
 }
 
 section {
-  padding: 100px 0;
+  padding: 2rem 0;
 }
 
 .section-heading {
   margin-top: 0;
+  text-transform: uppercase;
+}
+
+.section-paragraph {
+  padding-left: 2rem;
 }
 
 ::-moz-selection {
@@ -88,4 +102,22 @@ img::-moz-selection {
 
 body {
   -webkit-tap-highlight-color: $gray-darker;
+}
+
+.overlay {
+  @include coverer;
+  background: rgba(black, 0.5);
+  z-index: 1000;
+}
+
+.footer-top {
+  height: 4rem;
+  width: 100%;
+  background-color: #a7a7a7;
+}
+
+.footer-bot {
+  height: 2rem;
+  width: 100%;
+  background-color: #747474;
 }

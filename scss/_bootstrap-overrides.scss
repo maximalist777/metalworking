@@ -12,8 +12,15 @@
   @include button-variant($gray-darker, white, white);
 }
 
+.btn-gray {
+  @include button-variant(white, $gray, $gray);
+}
+
+.btn-yellow {
+  @include button-variant (#222, $yellow, $yellow);
+}
 .btn-primary {
-  @include button-variant(white, $theme-primary, $theme-primary);
+  @include button-variant(white, $button-primary, $button-primary);
 }
 
 .btn {

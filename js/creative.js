@@ -35,8 +35,16 @@
     }
   });
 
+  // Animate On Scroll
+  AOS.init({
+    duration: 1200,
+  })
+
+
   // Scroll reveal calls
   window.sr = ScrollReveal();
+  sr.reveal('.sr-mh', { duration: 2000 }, 50);
+
   sr.reveal('.sr-icons', {
     duration: 600,
     scale: 0.3,
@@ -51,6 +59,18 @@
     scale: 0.3,
     distance: '0px'
   }, 300);
+  sr.reveal('.sr-left', {
+    duration: 1000,
+    delay: 200
+  });
+  sr.reveal('.sr-right', {
+    duration: 1000,
+    delay: 200
+  });
+  sr.reveal('.sr-bottom', {
+    duration: 1000,
+    delay: 200
+  });
 
   // Magnific popup calls
   $('.popup-gallery').magnificPopup({
