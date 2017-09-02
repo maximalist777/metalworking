@@ -2,13 +2,14 @@
 #mainNav {
   border-color: fade-out($gray-darker, .95);
   background-color: white;
-  @include sans-serif-font;
+  // @include sans-serif-font;
+  font-family: 'Comfortaa', cursive;
   @include transition-all;
   .navbar-brand {
     font-weight: 700;
     text-transform: uppercase;
     color: $theme-primary;
-    @include sans-serif-font;
+    font-family: 'Comfortaa', cursive;
     &:focus,
     &:hover {
       color: darken($theme-primary, .1);
