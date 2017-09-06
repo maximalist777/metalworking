@@ -6,7 +6,7 @@ html {
   font-family: 'Comfortaa', cursive;
 }
 
-.f-Comfortaa{
+.f-Comfortaa {
   font-family: 'Comfortaa', cursive;
 }
 
@@ -43,9 +43,12 @@ h6 {
 }
 
 p {
-  font-size: 16px;
+  font-size: 1.3125rem;
+  @media (max-width: 992px) {
+    font-size: 1rem;
+  }
   line-height: 1.5;
-  margin-bottom: 20px;
+  margin-bottom: 20px;  
 }
 
 .bg-primary {
