@@ -1,0 +1,17 @@
+.footer {
+    color: white;
+    @include serif-font;
+    .author {
+    font-size: .8rem;
+    }
+    &-top {
+        padding: 1rem;
+        width: 100%;
+        background-color: #a7a7a7;
+    }
+    &-bot {
+        padding: 1rem;
+        width: 100%;
+        background-color: #747474;
+    }
+}

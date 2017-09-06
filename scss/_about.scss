@@ -6,6 +6,8 @@
         margin-top: 2rem;
     }
     &-logo {
+        min-height: 4rem;
+        display: block;
     }
 }
 
@@ -16,4 +18,13 @@
     width: 0;
     top: 20%;
     left: -2px;
+}
+
+.svidetelstvo {
+    p {
+        font-size: 1rem;
+    }
+    img {
+        margin-bottom: 2rem;
+    }
 }
