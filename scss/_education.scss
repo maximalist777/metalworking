@@ -7,6 +7,15 @@
     border-radius: 1rem;
     color: white;
     margin-bottom: 2rem;
+    .program-top, .program-bot {
+        @media (max-width: 991px) {
+            min-height: auto;
+        }
+        min-height: 5rem;
+    }
+    p {
+        margin-bottom: 0.5rem;
+    }
     &-title {
         flex-basis: 60%;
         padding: 1rem;
