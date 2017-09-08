@@ -1,8 +1,8 @@
-(function($) {
+(function ($) {
   "use strict"; // Start of use strict
 
   // Smooth scrolling using jQuery easing
-  $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function() {
+  $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function () {
     if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
       var target = $(this.hash);
       target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
@@ -16,7 +16,7 @@
   });
 
   // Closes responsive menu when a scroll trigger link is clicked
-  $('.js-scroll-trigger').click(function() {
+  $('.js-scroll-trigger').click(function () {
     $('.navbar-collapse').collapse('hide');
   });
 
@@ -27,7 +27,7 @@
   });
 
   // Collapse the navbar when page is scrolled
-  $(window).scroll(function() {
+  $(window).scroll(function () {
     if ($("#mainNav").offset().top > 100) {
       $("#mainNav").addClass("navbar-shrink");
     } else {
@@ -43,7 +43,9 @@
 
   // Scroll reveal calls
   window.sr = ScrollReveal();
-  sr.reveal('.sr-mh', { duration: 2000 }, 50);
+  sr.reveal('.sr-mh', {
+    duration: 2000
+  }, 50);
 
   sr.reveal('.sr-icons', {
     duration: 600,
@@ -86,6 +88,32 @@
     image: {
       tError: '<a href="%url%">The image #%curr%</a> could not be loaded.'
     }
+  });
+
+  // browser window scroll (in pixels) after which the "back to top" link is shown
+  var offset = 300,
+    //browser window scroll (in pixels) after which the "back to top" link opacity is reduced
+    offset_opacity = 1200,
+    //duration of the top scrolling animation (in ms)
+    scroll_top_duration = 700,
+    //grab the "back to top" link
+    $back_to_top = $('.cd-top');
+
+  //hide or show the "back to top" link
+  $(window).scroll(function () {
+    ($(this).scrollTop() > offset) ? $back_to_top.addClass('cd-is-visible'): $back_to_top.removeClass('cd-is-visible cd-fade-out');
+    if ($(this).scrollTop() > offset_opacity) {
+      $back_to_top.addClass('cd-fade-out');
+    }
+  });
+
+  //smooth scroll to top
+  $back_to_top.on('click', function (event) {
+    event.preventDefault();
+    $('body,html').animate({
+      scrollTop: 0,
+    }, scroll_top_duration);
+
   });
 
 })(jQuery); // End of use strict

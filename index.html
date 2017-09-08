@@ -23,9 +23,20 @@
   <!-- Custom styles for this template -->
   <link href="css/creative.min.css" rel="stylesheet">
 
+  <!-- APIs -->
+  <script type="text/javascript" src="//vk.com/js/api/openapi.js?146"></script>
+
 </head>
 
 <body id="page-top">
+
+
+<a href="" class="cd-top">Top</a>
+<!-- VK Widget -->
+<div id="vk_community_messages"></div>
+<script type="text/javascript">
+  VK.Widgets.CommunityMessages("vk_community_messages", 153076722, {tooltipButtonText: "Есть вопрос?"});
+  </script>
 
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
@@ -93,10 +104,10 @@
           </div>
         </div>
         <div class="col-lg-4">
-            <div class="svidetelstvo">
-                <img class="img-fluid sr-button" src="/img/svidetelstvo-icon.jpg" alt="">
-                <p>Завершение курса профессионального обучения подтверждается свидетельством о профессии рабочего, должности служащего.</p>
-              </div>
+          <div class="svidetelstvo">
+            <img class="img-fluid sr-button" src="/img/svidetelstvo-icon.jpg" alt="">
+            <p>Завершение курса профессионального обучения подтверждается свидетельством о профессии рабочего, должности служащего.</p>
+          </div>
         </div>
       </div>
   </section>
@@ -757,21 +768,29 @@
 
         <ul class="nav nav-pills nav-fill" id="pills-tab" role="tablist">
           <li class="nav-item">
-            <a class="nav-link active" data-toggle="pill" href="#pills-home">Первичное обучение</a>
+            <a class="nav-link active" data-toggle="pill" href="#pills-home">Для физических лиц</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" data-toggle="pill" href="#pills-profile">Повышение квалификации</a>
+            <a class="nav-link" data-toggle="pill" href="#pills-profile">Для юридических лиц</a>
           </li>
         </ul>
         <br>
         <div class="tab-content text-center" id="pills-tabContent">
           <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
-            <a class="admissions-docs-link" href="/docs/anketa.doc"><i class="fa fa-file-word-o fa-5x"></i><hr>анкета</a>
-            <a class="admissions-docs-link" href="/docs/dogovor.doc"><i class="fa fa-file-word-o fa-5x"></i><hr>договор</a>
+            <div class="card">
+              <div class="card-body">
+                <a class="admissions-docs-link" href="/docs/Заявление.docx"><i class="fa fa-file-word-o fa-5x"></i><hr>анкета</a>
+                <a class="admissions-docs-link" href="/docs/Договор.doc"><i class="fa fa-file-word-o fa-5x"></i><hr>договор</a>
+              </div>
+            </div>
           </div>
           <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
-            <a class="admissions-docs-link" href="/docs/anketa.doc"><i class="fa fa-file-word-o fa-5x"></i><hr>анкета</a>
-            <a class="admissions-docs-link" href="/docs/dogovor_ur_lico.docx"><i class="fa fa-file-word-o fa-5x"></i><hr>договор</a>
+            <div class="card">
+              <div class="card-body">
+                <a class="admissions-docs-link" href="/docs/Заявление для юр. лица.docx"><i class="fa fa-file-word-o fa-5x"></i><hr>анкета</a>
+                <a class="admissions-docs-link" href="/docs/Договор для юр. лица.docx"><i class="fa fa-file-word-o fa-5x"></i><hr>договор</a>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -847,16 +866,29 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-lg-4 ml-auto text-center">
+        <div class="col-lg-4 text-center">
           <i class="fa fa-phone fa-3x sr-contact"></i>
           <p>+7 (911) 740 6422</p>
           <p>по будням с 9 до 17 часов</p>
         </div>
-        <div class="col-lg-4 mr-auto text-center">
+        <div class="col-lg-4 text-center">
           <i class="fa fa-envelope-o fa-3x sr-contact"></i>
           <p>
             <a href="mailto:volovik_ov@bstu.spb.su">volovik_ov@bstu.spb.su</a>
           </p>
+        </div>
+        <div class="col-lg-4 text-center">
+          <span id="vk_groups"></span>
+          <script type="text/javascript">
+            VK.Widgets.Group("vk_groups", {
+              mode: 3,
+              width: "300px",
+              height: "160px",
+              color1: 'FFFFFF',
+              color2: '2B587A',
+              color3: '5B7FA6'
+            }, 153076722);
+          </script>
         </div>
       </div>
     </div>

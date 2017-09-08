@@ -1,8 +1,7 @@
 // Styling for the navbar
 #mainNav {
   border-color: fade-out($gray-darker, .95);
-  background-color: white;
-  // @include sans-serif-font;
+  background-color: white; // @include sans-serif-font;
   font-family: 'Comfortaa', cursive;
   @include transition-all;
   .navbar-brand {
@@ -22,9 +21,9 @@
     color: $gray-darker;
   }
   .navbar-nav {
-    > li.nav-item {
-       > a.nav-link:focus,
-      > a.nav-link {
+    >li.nav-item {
+      >a.nav-link:focus,
+      >a.nav-link {
         font-size: 13px;
         font-weight: 700;
         text-transform: uppercase;
@@ -52,8 +51,8 @@
         color: white;
       }
     }
-    .navbar-nav > li.nav-item > a.nav-link,
-    .navbar-nav > li.nav-item > a.nav-link:focus {
+    .navbar-nav>li.nav-item>a.nav-link,
+    .navbar-nav>li.nav-item>a.nav-link:focus {
       color: fade-out(white, .3);
       &:hover {
         color: white;
@@ -70,8 +69,8 @@
           color: darken($theme-primary, .1);
         }
       }
-      .navbar-nav > li.nav-item > a.nav-link,
-      .navbar-nav > li.nav-item > a.nav-link:focus {
+      .navbar-nav>li.nav-item>a.nav-link,
+      .navbar-nav>li.nav-item>a.nav-link:focus {
         color: $gray-darker;
         &:hover {
           color: $theme-primary;
@@ -79,4 +78,54 @@
       }
     }
   }
+}
+
+.cd-top {
+  display: inline-block;
+  height: 50px;
+  width: 50px;
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.05); */
+  /* image replacement properties */
+  background: #50514F url(../img/cd-top-arrow.svg) no-repeat center 50%;
+  border-color: #fff;
+
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity .3s 0s, visibility 0s .3s;
+  z-index: 1000;
+  border-radius: 50%;
+  border-width: 2px !important;
+
+}
+.cd-top:hover {
+    opacity: 1 !important;
+    text-decoration: none;
+}
+
+.cd-top.cd-is-visible,
+.cd-top.cd-fade-out,
+.no-touch .cd-top:hover {
+  transition: opacity .3s 0s, visibility 0s 0s;
+}
+
+.cd-top.cd-is-visible {
+  /* the button becomes visible */
+  visibility: visible;
+  opacity: 1;
+}
+
+.cd-top.cd-fade-out {
+  /* if the user keeps scrolling down, the button is out of focus and becomes less visible */
+  opacity: .5;
+}
+
+.no-touch .cd-top:hover {
+  opacity: 1;
+  text-decoration: none;
 }
